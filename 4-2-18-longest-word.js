@@ -1,26 +1,14 @@
-function LongestWord(sen) {
-    longSen = {};
-    words = sen.split(" ");
-    var longest = 0;
-    var longestIndex = 0;
-    for (let i = 0; i < words.length; i++) {
-      var length = 0;
-      letters = words[i].split('');
-        for (let j=0; j < letters.length; j++) {
-          if (isLetter(letters[j]) !== null) {
-            length ++;
+function LongestWord(sen) { 
+    sen = sen.split(" ");
+    let longest = 0;
+    for (let i = 0; i < sen.length; i++) {
+      console.log(sen[i].length);
+      if (sen[i].length > longest) {
+        console.log(sen[i].length + "is longer than" + longest);
+        longest = sen[i].length;
       }
-      if (words[i].length > longest)
-        {
-          longest = words[i];
-          longestIndex = i;
-        }
-        longSen[i] = words[i].length;
-      //console.log(words[i]);
-      console.log(longest + " at " + longestIndex + " is longest");
       }
-      console.log(longSen);
-}
+  //console.log(longest + " is the longest word.")
   // code goes here  
   return sen; 
 }
@@ -32,4 +20,4 @@ function isLetter(str) {
 // keep this function call here 
 //LongestWord(readline());                            
 
-get = LongestWord("a world, how are you?");
+get = LongestWord("a world, how are you acclimating?");
